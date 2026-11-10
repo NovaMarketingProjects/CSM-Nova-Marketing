@@ -40,6 +40,10 @@
       "required": false,
       "pluginOptions": { "i18n": { "localized": true } }
     },
+    "publishedDate": {
+      "type": "date",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
     "cover_image": {
       "type": "media",
       "multiple": false,

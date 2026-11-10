@@ -7,6 +7,7 @@ const ARTICLE_LAYOUT = {
     title: { edit: { label: 'Título', description: '', placeholder: '', visible: true, editable: true }, list: { label: 'Título', searchable: true, sortable: true } },
     slug: { edit: { label: 'Slug', description: '', placeholder: '', visible: true, editable: true }, list: { label: 'Slug', searchable: true, sortable: true } },
     excerpt: { edit: { label: 'Extracto', description: '', placeholder: '', visible: false, editable: true }, list: { label: 'Extracto', searchable: false, sortable: false } },
+    publishedDate: { edit: { label: 'Fecha de publicación', description: 'Fecha que se muestra en el blog y que ordena los artículos. Si la dejas vacía, se usa la fecha en que se publicó en Strapi.', placeholder: '', visible: true, editable: true }, list: { label: 'Fecha', searchable: false, sortable: true } },
     metadescription: { edit: { label: 'Meta Descripción SEO', description: 'Descripción para Google (150-160 caracteres)', placeholder: 'Escribe la meta descripción...', visible: true, editable: true }, list: { label: 'Meta Descripción', searchable: false, sortable: false } },
     cover_image: { edit: { label: 'Imagen de portada', description: '', placeholder: '', visible: true, editable: true }, list: { label: 'cover_image', searchable: false, sortable: false } },
     author: { edit: { label: 'Autor', description: '', placeholder: '', visible: true, editable: true }, list: { label: 'author', searchable: true, sortable: true } },
@@ -19,9 +20,10 @@ const ARTICLE_LAYOUT = {
     documentId: { edit: {}, list: { label: 'documentId', searchable: true, sortable: true } },
   },
   layouts: {
-    list: ['id', 'title', 'slug', 'cover_image'],
+    list: ['id', 'title', 'publishedDate', 'slug', 'cover_image'],
     edit: [
       [{ name: 'title', size: 6 }, { name: 'slug', size: 6 }],
+      [{ name: 'publishedDate', size: 6 }],
       [{ name: 'metadescription', size: 12 }],
       [{ name: 'cover_image', size: 6 }, { name: 'author', size: 6 }],
       [{ name: 'categories', size: 12 }],
